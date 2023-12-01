@@ -1,0 +1,8 @@
+Options -Indexes
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
+  Header set Access-Control-Allow-Origin "https://receive.cash"
+  Header set Access-Control-Allow-Credentials true
+  Header set Access-Control-Allow-Headers "*"
+  Header set Vary "Origin"
+</IfModule>

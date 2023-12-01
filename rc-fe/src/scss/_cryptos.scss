@@ -1,0 +1,165 @@
+.cryptos-page {
+  .sorting-with-keyboard-hint {
+    position: absolute;
+    opacity: 0;
+    cursor: default;
+
+    &:focus, &:focus-visible {
+      position: unset;
+      opacity: 1;
+      outline: 0;
+    }
+  }
+
+  .sortable-crypto-card-cont {
+    padding: 0;
+    --bs-btn-hover-border-color: transparent;
+
+    &:focus {
+      --bs-btn-focus-shadow-rgb: 66, 131, 227;
+      box-shadow: var(--bs-btn-focus-box-shadow);
+    }
+  }
+
+  .crypto.card {
+    cursor: pointer;
+    transition: background 2s, color 2s, border-color 2s;
+    --bs-btn-hover-border-color: transparent;
+
+    .card-header {
+      padding: {
+        left: var(--bs-card-cap-padding-y);
+        right: var(--bs-card-cap-padding-y);
+      }
+      position: relative;
+
+      &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 4px;
+        height: 4px;
+        top: 50%;
+        margin-top: -2px;
+        right: 1rem;
+        background-color: #da3232;
+        opacity: 0;
+        transition: opacity .5s;
+      }
+
+      .title {
+        font-size: 1.2rem;
+
+        @media (max-width: 600px) {
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &.bg-dark {
+      .card-header::after {
+        background-color: #f35252;
+      }
+    }
+
+    .logo-wrapper {
+      position: relative;
+      padding-bottom: 100%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &.updating {
+      .card-header::after {
+        opacity: 1;
+        animation: {
+          name: flash;
+          duration: 1s;
+          iteration-count: infinite;
+        }
+      }
+    }
+
+    &:focus {
+      --bs-btn-focus-shadow-rgb: 66, 131, 227;
+      box-shadow: var(--bs-btn-focus-box-shadow);
+    }
+  }
+}
+
+.crypto.modal-dialog {
+  .modal-header {
+    .logo {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .address {
+    word-break: break-all;
+    cursor: pointer;
+
+    .qr {
+      max-height: 92vh;
+    }
+
+    .text {
+      svg {
+        width: 1rem;
+        height: 1rem;
+        display: inline-block;
+        margin-left: .3rem;
+      }
+    }
+  }
+
+  .modal-footer {
+    justify-content: space-between;
+
+    .btn {
+      line-height: 1.3rem;
+      padding: {
+        left: .1rem;
+        right: .1rem;
+        top: .1rem;
+        bottom: .1rem;
+      }
+
+      svg {
+        width: 1.3rem;
+        height: 1.3rem;
+
+        path {
+          fill: #63676f;
+        }
+      }
+
+      &:hover svg path {
+        fill: #80858d;
+
+      }
+    }
+  }
+
+  &.dark-theme {
+    .btn {
+      svg path {
+        fill: #b8b8c4;
+      }
+
+      &:hover svg path {
+        fill: #ffffff;
+      }
+    }
+  }
+}

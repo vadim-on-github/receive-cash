@@ -1,0 +1,56 @@
+.user-pages {
+  .card-header {
+    padding: {
+      left: var(--bs-card-cap-padding-y);
+      right: var(--bs-card-cap-padding-y);
+    }
+  }
+
+  .title {
+    font-size: 1.2rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+  }
+
+  .cryptos {
+    margin: -.5rem;
+    text-align: center;
+
+    .crypto {
+      margin: .5rem;
+    }
+  }
+
+  .page-link {
+    color: var(--bs-light-rgb);
+    padding: {
+      left: 0;
+      right: 0;
+      top: 2px;
+      bottom: 2px;
+    }
+    border: none;
+
+    &:focus, &:focus-visible {
+      border: none;
+      outline: 0;
+      --bs-btn-focus-shadow-rgb: 66, 131, 227;
+      box-shadow: var(--bs-btn-focus-box-shadow);
+    }
+
+    &:hover {
+      border: none;
+      outline: 0;
+    }
+
+    .tick path {
+      fill: #198754 !important;
+    }
+  }
+}
