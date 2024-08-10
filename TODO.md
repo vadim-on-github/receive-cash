@@ -1,31 +1,29 @@
-# Bugs
+# Fix bugs
 
-- going from someone's page to the donations page via footer's link - doesn't go
+- going from one page of cryptos to anther one via a link or something doesn't update the cryptos; going off of a cryptos page probably doesn't clear the Cryptos state making it flash a previously viewed page of cryptos when going to a new one
 
-# Improvements
+# Improve
 
 ## Security
 
-- see if we can improve firebase rules: allow write for authed user only for his/her own documents (crypto pages)
 - expire & delete incomplete accounts (passwordless) that haven't completed registration
 - clear verif_code and pass_reset_code flds in db when no longer needed
-- encrypt passwords/emails locally in the browser before handoff to php
 - request email verification code entry when changing account email address
+- encrypt passwords/emails locally before handoff to server when logging in/singing up
 
 ## Accessibility
 
 - disable tabbing when sorting cryptos
 - after deleting a crypto with keyboard, focus somewhere near the deleted crypto
-- have an option in the SR hint about sorting on `<Cryptos>` to not show this alert again
 
 ## UX
 
-- be able to edit a crypto's name/code
 - be able to save a draft page from `<UserPages>`
 - have a "Send again" btn for confirmation code emails
 - when editing a `<Cryptos>` page, have the page title and url edit flds available in the site header
 - Add Drag-n-Drop functionality for `<UserPages>` like in `<SortableCryptos>`
 - add hrefs to all navigational buttons/links to allow middle-clicking to open in new tabs
+- pasting an email verification code automatically submits the code, no need to press enter or click the button Verify
 
 ## Design
 
@@ -55,19 +53,19 @@
 - try to get rid of refs in `<Crypto>`
 - see if we can use Bootstrap's built-in light/dark settings rather than own
 
-# New features
+# Implement new features
 
-- be able to add a public view address (e.g. for XMR)
+- be able to allow the public view balances on a page of cryptos (would have to a input public view addresses for XMR/others)
 - be able to add custom logos to user pages
 - be able to add custom crypto logos
-- add user page analytics
+- be able to add custom cryptos and maybe other kinds of currencies to a page
+- be able to edit a crypto's name/code making it a custom crypto/other currency on a page
+- be able to add multiple same types of cryptos on the same page, diffrentiated by a label/category section/or something
+- page analytics (maybe on a user's dashboard)
 - allow embedding cryptos in an iframe / provide hardcode
 - make footer collapsible, and after it does have a little info icon/btn in its place
 - have a section with the page owner's name/info/avatar/links
 - categories on pages
-
-# Test
-
-- screen readers
-- diff mobile browsers
-- old browsers
+- optional tabs for different pages of cryptos viewable when on a page of cryptos
+- view the latest pending/confirmed transaction(s) of cryptos on a user's dashboard or on a page of cryptos logged in as the owner of
+- view crypto wallet balances on a page of cryptos when logged in as the owner of
