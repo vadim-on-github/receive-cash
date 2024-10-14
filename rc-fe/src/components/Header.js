@@ -3,6 +3,7 @@ import {Button, ButtonGroup, Container, Navbar} from "react-bootstrap";
 import {MainMenu} from "./MainMenu";
 import {LightSwitch} from "./LightSwitch";
 import {FloppyIcon} from "./icons/FloppyIcon";
+import {NavLink} from "react-router-dom";
 
 
 class Header extends React.Component {
@@ -36,7 +37,7 @@ class Header extends React.Component {
         } else if (this.props.body === 'userPages') {
             pageTitle = prettifyBreadcrumbs(process.env.REACT_APP_SITE_NAME + ' / Your pages')
         } else {
-            pageTitle = process.env.REACT_APP_SITE_NAME;
+            pageTitle = <NavLink to="/">{process.env.REACT_APP_SITE_NAME}</NavLink>;
         }
         return (
             <Navbar bg={this.props.theme} variant={this.props.theme} className='main-header mb-4'>

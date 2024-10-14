@@ -1,6 +1,8 @@
 # Fix bugs
 
-- going from one page of cryptos to anther one via a link or something doesn't update the cryptos; going off of a cryptos page probably doesn't clear the Cryptos state making it flash a previously viewed page of cryptos when going to a new one
+- going off one page of cryptos, browsing, then going onto another page of cryptos flashes previous page's cryptos/page
+  title;
+    - going off of a cryptos page probably doesn't clear the Cryptos state
 
 # Improve
 
@@ -55,7 +57,8 @@
 
 # Implement new features
 
-- be able to allow the public view balances on a page of cryptos (would have to a input public view addresses for XMR/others)
+- be able to allow the public view balances on a page of cryptos (would have to a input public view addresses for
+  XMR/others)
 - be able to add custom logos to user pages
 - be able to add custom crypto logos
 - be able to add custom cryptos and maybe other kinds of currencies to a page
@@ -67,5 +70,6 @@
 - have a section with the page owner's name/info/avatar/links
 - categories on pages
 - optional tabs for different pages of cryptos viewable when on a page of cryptos
-- view the latest pending/confirmed transaction(s) of cryptos on a user's dashboard or on a page of cryptos logged in as the owner of
+- view the latest pending/confirmed transaction(s) of cryptos on a user's dashboard or on a page of cryptos logged in as
+  the owner of
 - view crypto wallet balances on a page of cryptos when logged in as the owner of

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Badge, Nav, Navbar, NavItem} from "react-bootstrap";
+import {Nav, Navbar} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 
 export function Footer(props) {
@@ -30,10 +30,6 @@ export function Footer(props) {
                         to="/privacy"
                         className={'nav-link'}
                     >Privacy</NavLink>
-                    <NavLink
-                        to="/donations"
-                        className={'nav-link'}
-                    >Donations</NavLink>
                     <NavLink
                         to="/credits"
                         className={'nav-link'}

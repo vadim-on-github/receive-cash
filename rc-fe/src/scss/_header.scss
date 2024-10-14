@@ -24,6 +24,11 @@
       display: none;
     }
   }
+
+  .navbar-brand a {
+    text-decoration: none;
+    color: var(--#{$prefix}heading-color);
+  }
 }
 
 #main-menu-toggle,

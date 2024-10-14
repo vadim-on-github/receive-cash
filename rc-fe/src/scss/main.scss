@@ -63,14 +63,16 @@ body, html, #root {
 
 .card {
   .btn-link,
-  .card-link {
+  .card-link,
+  a {
     .dark-theme & {
       color: rgb(127, 178, 255);
     }
   }
 
   .card-footer .btn-link,
-  .card-footer .card-link {
+  .card-footer .card-link,
+  a {
     .dark-theme & {
       color: rgb(131, 175, 240);
     }
@@ -117,6 +119,8 @@ body, html, #root {
 
 .list-group-flush {
   .list-group-item {
+    background-color: var(--#{$prefix}list-group-bg);
+
     &:first-child {
       border-top-width: var(--bs-list-group-border-width);
     }

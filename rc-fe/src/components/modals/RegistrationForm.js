@@ -218,8 +218,8 @@ class RegistrationForm extends Component {
                                         </p>
                                     ) : (
                                         <Form.Text className={'text-start d-block mt-3'}>
-                                            This is a more secure type of account. We would only store the
-                                            encrypted version of your email address and password in our databases
+                                            This is a more secure type of account. We only store encrypted versions of
+                                            your email address and password
                                         </Form.Text>
                                     )}
                                 </Col>

@@ -1,4 +1,4 @@
-import {Button, ButtonGroup, Card, Col, Container, ListGroup, Row} from "react-bootstrap";
+import {Card, Col, Container, ListGroup, Row} from "react-bootstrap";
 import {NavLink} from "react-router-dom";
 import React from "react";
 
@@ -6,39 +6,47 @@ export function Credits(props) {
     return (
         <Container>
             <Row>
-                <Col xxxxs={12} md={6} xl={4}>
+                <Col xxxxs={12} md={6} xl={3}>
                     <Card
                         className={'mb-4'}
                         bg={props.theme}
                         text={props.theme === 'light' ? 'dark' : 'white'}
                     >
                         <Card.Header>
-                            <h2 className={'mb-0'}>Web development</h2>
+                            <h2 className={'mb-0'}>Development</h2>
                         </Card.Header>
                         <Card.Body>
-                            This website was envisioned, prototyped, and initially developed by Vadim Haiduk
+                            <p>This project was started by&nbsp;
+                                <a href={'https://web.haiduk.org'} target={'_blank'}>
+                                    Vadim&nbsp;H
+                                </a>
+                                &nbsp;and is now open-source
+                            </p>
                         </Card.Body>
                         <ListGroup variant="flush">
                             <ListGroup.Item className={'bg-' + props.theme}>
-                                <Card.Link href={'https://web.haiduk.org'} target={'_blank'}>
-                                    web.haiduk.org
+                                <Card.Link href={'https://github.com/vadim-on-github/receive-cash'} target={'_blank'}>
+                                    GitHub
                                 </Card.Link>
                             </ListGroup.Item>
                             <ListGroup.Item className={'bg-' + props.theme}>
-                                <Card.Link href={'/vadim'}>
-                                    receive.cash/vadim
+                                <Card.Link href={'https://memo.cash/profile/1MAGxXBnqxuQ18aeiHtRVCaewSVjQSGbKe'}
+                                           target={'_blank'}>
+                                    Memo.cash
                                 </Card.Link>
-                                {/*<NavLink
-                                    to="/vadim"
+                            </ListGroup.Item>
+                            <ListGroup.Item className={'bg-' + props.theme}>
+                                <NavLink
+                                    to="/donations"
                                     className={'card-link'}
                                 >
-                                    receive.cash/vadim
-                                </NavLink>*/}
+                                    Donations
+                                </NavLink>
                             </ListGroup.Item>
                         </ListGroup>
                     </Card>
                 </Col>
-                <Col xxxxs={12} md={6} xl={4}>
+                <Col xxxxs={12} md={6} xl={3}>
                     <Card
                         className={'mb-4'}
                         bg={props.theme}
