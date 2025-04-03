@@ -1,0 +1,48 @@
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*@keyframes flip {
+  0% {
+    transform: scaleX(100%);
+  }
+  50% {
+    transform: scaleX(0);
+
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+
+@keyframes quickly-hide {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    position: absolute;
+    top: -10000px;
+  }
+}
+
+@keyframes quickly-show {
+  0% {
+    opacity: 0;
+    position: absolute;
+    top: -10000px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}*/

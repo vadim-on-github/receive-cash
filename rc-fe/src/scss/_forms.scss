@@ -1,0 +1,86 @@
+button, .btn {
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  svg:not(.multi-color) path {
+    fill: #494c52;
+
+    .dark-theme & {
+      fill: #d3d3d3;
+    }
+  }
+
+  &.btn-primary, &.btn-success, &.btn-secondary {
+    svg:not(.multi-color) path {
+      fill: #FFF;
+    }
+  }
+
+  &.btn-link:hover {
+    svg path {
+      transition: none;
+    }
+
+    svg:not(.multi-color) path {
+      fill: #626262;
+
+      .dark-theme & {
+        fill: #ffffff;
+      }
+    }
+  }
+}
+
+
+.dropdown-menu * {
+  transition: none;
+}
+
+.dropdown-option {
+  transition: none;
+}
+
+input, .react-select > div {
+  transition: box-shadow 2s, color 2s, border-color 2s, background-color 2s !important;
+}
+
+.form-control.is-valid {
+  border-color: $input-border-color;
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
+  }
+}
+
+.text-input-error {
+  padding: {
+    left: .5rem;
+    right: .5rem;
+  }
+}
+
+.form-control:focus, .react-select:focus-within, .btn-close {
+  transition: box-shadow .2s !important;
+
+  * {
+    transition: box-shadow .2s !important;
+  }
+}
+
+.form-label {
+  padding: {
+    left: $input-btn-padding-x;
+    right: $input-btn-padding-x;
+  }
+}
+
+.social-button:hover {
+
+}
+
+.form-text {
+  color: #6c757d;
+}

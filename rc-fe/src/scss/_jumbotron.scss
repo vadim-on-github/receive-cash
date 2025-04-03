@@ -1,0 +1,109 @@
+.jumbotron {
+  .main-box {
+    background-position-x: right;
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.with-img .text-n-actions {
+    width: 55%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .img-for-narrowest-vp {
+    display: none;
+    position: relative;
+    margin-bottom: 1rem;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .body {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .actions {
+    margin-top: 1.75rem;
+  }
+
+
+  @media (max-width: 991.98px) {
+    .main-box {
+      background-size: auto 80%;
+    }
+
+    &.with-img .text-n-actions {
+      width: 60%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    .actions {
+      margin-top: 1.5rem;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .main-box {
+      background-image: none !important;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: .75rem;
+      font-size: 1.75rem;
+    }
+
+    .img-for-narrowest-vp {
+      display: block;
+    }
+
+    &.with-img .text-n-actions {
+      width: 100%;
+    }
+
+    .actions {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 499.98px) {
+    .text-n-actions {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    .actions {
+      margin-top: 1rem;
+
+      .btn {
+        --bs-btn-padding-x: 0.7rem;
+        --bs-btn-padding-y: 0.38rem;
+        --bs-btn-font-size: 1.1rem;
+      }
+    }
+  }
+}

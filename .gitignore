@@ -1,0 +1,32 @@
+# dependencies
+/rc-fe/node_modules
+/rc-fe/.pnp
+/rc-fe.pnp.js
+
+# testing
+/rc-fe/coverage
+
+# production
+/rc-fe/build
+
+# development
+.idea
+/rc-be/php_errors.log
+/rc-fe/src/firebase-config.production.js
+
+# misc
+/rc-fe/.DS_Store
+/rc-fe/.env.local
+/rc-fe/.env.development.local
+/rc-fe/.env.test.local
+/rc-fe/.env.production.local
+
+/rc-fe/npm-debug.log*
+/rc-fe/yarn-debug.log*
+/rc-fe/yarn-error.log*
+
+/rc-be/env.php
+
+#composer
+/rc-be/vendor
+/rc-be/.DS_Store

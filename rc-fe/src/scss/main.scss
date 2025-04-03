@@ -1,0 +1,128 @@
+// Bootstrap required
+@import "~bootstrap/scss/functions";
+
+// Bootstrap customizations
+@import "custom-var";
+
+// Bootstrap required
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+// Bootstrap components
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/bootstrap-utilities";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/alert";
+
+// Bootstrap all
+//@import "~bootstrap/scss/bootstrap";
+
+@import "keyframes";
+@import "header";
+@import "jumbotron";
+@import "themes";
+@import 'cryptos';
+@import 'reg-n-login-form';
+@import 'pages';
+@import "loading_indicator";
+@import "delete-account-form";
+@import "forms";
+@import "footer";
+
+.hidden {
+  display: none;
+}
+
+body, html, #root {
+  height: 100%;
+}
+
+*, .alert {
+  transition: background 1s, color 1s, border-color 1s, box-shadow 1s, fill 1s;
+}
+
+
+.card {
+  .btn-link,
+  .card-link,
+  a {
+    .dark-theme & {
+      color: rgb(127, 178, 255);
+    }
+  }
+
+  .card-footer .btn-link,
+  .card-footer .card-link,
+  a {
+    .dark-theme & {
+      color: rgb(131, 175, 240);
+    }
+  }
+
+  .card-header {
+    border-bottom: none;
+  }
+
+  .card-body {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  .modal-sm {
+    --bs-modal-width: 300px;
+    max-width: var(--bs-modal-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.highlight-icon-on-hover {
+  &:hover {
+    svg:not(.dont-highlight-icon-on-hover):not(.qr) path {
+      fill: #9da2a6 !important;
+    }
+
+    &.hi-contrast {
+      svg:not(.dont-highlight-icon-on-hover):not(.qr) path {
+        fill: #9da2a6 !important;
+      }
+    }
+
+  }
+
+  &:hover svg path {
+    transition: none;
+  }
+}
+
+.list-group-flush {
+  .list-group-item {
+    background-color: var(--#{$prefix}list-group-bg);
+
+    &:first-child {
+      border-top-width: var(--bs-list-group-border-width);
+    }
+  }
+}

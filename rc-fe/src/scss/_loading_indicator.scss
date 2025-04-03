@@ -1,0 +1,55 @@
+@mixin start-flashing-of-loader {
+  opacity: 1;
+  animation: {
+    name: flash;
+    duration: 1s;
+    iteration-count: infinite;
+  }
+}
+
+.loading-flasher,
+.authProvider.btn,
+.btn:not(.dropdown-toggle),
+.user-page .card-header {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    display: block;
+    width: 4px;
+    height: 4px;
+    transition: opacity .5s;
+    opacity: 0;
+    background-color: #da4444;
+  }
+
+  &.visible,
+  &.loading {
+    &:after {
+      @include start-flashing-of-loader;
+    }
+  }
+}
+
+.user-page.loading .card-header:after {
+  top: 5px;
+  right: 5px;
+  @include start-flashing-of-loader;
+}
+
+.modal-footer .loading-flasher {
+  margin: 0; // Modal.Footer adds a margin to its children
+}
+
+.authProvider.btn::after {
+  background-color: #f00;
+}
+
+.dark-theme {
+  .authProvider.btn::after {
+    background-color: #f35252;
+  }
+}

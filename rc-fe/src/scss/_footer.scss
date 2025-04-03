@@ -1,0 +1,46 @@
+footer.footer {
+  .navbar {
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  .navbar-brand {
+    margin: {
+      left: .375rem;
+      right: .5rem;
+    }
+  }
+
+  .navbar-brand,
+  .nav-link {
+    --bs-navbar-brand-font-size: .75rem;
+    --bs-nav-link-font-size: .75rem;
+
+    @media (min-width: 390.01px) and (max-width: 440px) {
+      --bs-navbar-brand-font-size: .65rem;
+      --bs-nav-link-font-size: .65rem;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .navbar {
+      padding-top: .2rem;
+
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    .navbar-brand {
+      margin-right: 0;
+      padding-bottom: 0;
+    }
+
+    .navbar-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

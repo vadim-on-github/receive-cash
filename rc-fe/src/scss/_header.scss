@@ -1,0 +1,320 @@
+.main-header {
+  .bg-light {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .loading-flasher:after {
+    top: 0;
+    right: -12px;
+  }
+
+  .note {
+    @include media-breakpoint-down(md) {
+      font: {
+        size: .9rem
+      }
+      line-height: 1.25;
+    }
+    @include media-breakpoint-down(xs) {
+      font: {
+        size: .85rem
+      }
+    }
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  .navbar-brand a {
+    text-decoration: none;
+    color: var(--#{$prefix}heading-color);
+  }
+}
+
+#main-menu-toggle,
+.theme-switcher.btn,
+.save-page.btn {
+  border-radius: var(--bs-border-radius) !important;
+  padding: {
+    left: var(--bs-btn-padding-y);
+    right: var(--bs-btn-padding-y);
+    top: .25rem;
+    bottom: .25rem;
+  }
+
+  & > svg {
+    path {
+      transition: fill .15s;
+    }
+  }
+}
+
+#main-menu-toggle {
+  & > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  path {
+    fill: #7a7f83;
+  }
+
+  &:hover, &:active, &:focus {
+    & > svg path {
+      fill: #9ba3a8;
+    }
+  }
+
+  .dark-theme & {
+    svg path {
+      fill: rgb(137, 134, 145);
+    }
+
+    &:hover, &:active, &:focus {
+      & > svg path {
+        fill: rgb(169, 163, 178);
+      }
+    }
+  }
+}
+
+.theme-switcher.btn,
+.save-page.btn {
+  & > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.theme-switcher.btn {
+  & > svg {
+    .base {
+      fill: rgb(110, 109, 119);
+    }
+
+    .switch {
+      fill: rgb(160, 159, 169);
+    }
+
+    .arm {
+      fill: rgb(167, 166, 180);
+    }
+
+    .dome {
+      fill: rgb(120, 119, 129);
+    }
+
+    .cone {
+      fill: rgb(161, 159, 171);
+    }
+
+    .cone-shade {
+      fill: rgb(139, 137, 147);
+    }
+
+    .bulb-part-1 {
+      fill: rgb(234, 212, 12);
+    }
+
+    .bulb-part-2 {
+      fill: rgb(238, 193, 15);
+    }
+  }
+
+  &:hover > svg,
+  &:focus > svg,
+  &:active > svg {
+    .base {
+      fill: rgb(132, 130, 140);
+    }
+
+    .switch {
+      fill: rgb(180, 179, 190);
+    }
+
+    .arm {
+      fill: rgb(178, 178, 194);
+    }
+
+    .dome {
+      fill: rgb(140, 139, 150);
+    }
+
+    .cone {
+      fill: rgb(180, 177, 190);
+    }
+
+    .cone-shade {
+      fill: rgb(159, 157, 168);
+    }
+
+    .bulb-part-1 {
+      fill: rgb(234, 212, 12);
+    }
+
+    .bulb-part-2 {
+      fill: rgb(238, 193, 15);
+    }
+  }
+
+  .dark-theme & > svg {
+    .base {
+      fill: rgb(87, 86, 92);
+    }
+
+    .switch {
+      fill: rgb(137, 136, 144);
+    }
+
+    .arm {
+      fill: rgb(137, 136, 144);
+    }
+
+    .dome {
+      fill: rgb(87, 86, 92);
+    }
+
+    .cone {
+      fill: rgb(137, 136, 144);
+    }
+
+    .cone-shade {
+      fill: rgb(120, 118, 128);
+    }
+
+    .bulb-part-1 {
+      fill: rgb(84, 92, 101);
+    }
+
+    .bulb-part-2 {
+      fill: rgb(67, 75, 84);
+    }
+  }
+
+  .dark-theme &:hover > svg,
+  .dark-theme &:focus > svg,
+  .dark-theme &:active > svg {
+    .base {
+      fill: rgb(108, 107, 114);
+    }
+
+    .switch {
+      fill: rgb(156, 155, 162);
+    }
+
+    .arm {
+      fill: rgb(156, 155, 164);
+    }
+
+    .dome {
+      fill: rgb(112, 111, 119);
+    }
+
+    .cone {
+      fill: rgb(156, 155, 164);
+    }
+
+    .cone-shade {
+      fill: rgb(140, 138, 150);
+    }
+
+    .bulb-part-1 {
+      fill: rgb(104, 112, 122);
+    }
+
+    .bulb-part-2 {
+      fill: rgb(85, 95, 105);
+    }
+  }
+}
+
+.save-page.btn {
+  &:hover, &:active, &:focus {
+    .housing {
+      fill: #949494;
+    }
+
+    .door {
+      fill: #ececec;
+    }
+
+    .rails {
+      fill: #737373;
+    }
+  }
+
+  .dark-theme & svg {
+    .housing {
+      fill: #616161;
+    }
+
+    .door {
+      fill: #bdbdbd;
+    }
+
+    .rails {
+      fill: #424242;
+    }
+
+    .label-part-1 {
+      fill: #e1e1e1;
+    }
+
+    .label-part-2 {
+      fill: #0578b0;
+    }
+
+    &:hover, &:active, &:focus {
+      .housing {
+        fill: #757575;
+      }
+
+      .door {
+        fill: #c9c9c9;
+      }
+
+      .rails {
+        fill: #545454;
+      }
+
+      .label-part-1 {
+        fill: #eaeaea;
+      }
+    }
+  }
+}
+
+.dropdown-menu[data-bs-popper] {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    padding-right: .45rem;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+
+    path {
+      fill: #6e7275;
+    }
+  }
+
+  &.disabled {
+    svg path {
+      fill: var(--bs-dropdown-link-disabled-color)
+    }
+  }
+
+  .dark-theme & {
+    svg path {
+      fill: #889095;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+.reg-form.modal-dialog,
+.login-form.modal-dialog {
+  max-width: 95%;
+  margin: {
+    right: auto;
+    left: auto;
+    top: 3rem;
+  }
+
+  @media (min-width: 400px) {
+    max-width: 90%;
+  }
+
+  @media (min-width: 460px) {
+    max-width: 400px;
+  }
+
+  .authProvider.btn {
+    position: relative;
+    padding: {
+      right: var(--bs-btn-padding-y);
+      left: var(--bs-btn-padding-y);
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+
+      path {
+        transition: fill .15s;
+      }
+    }
+  }
+
+  &:not(.offeredToLogin):not(.accountCreated):not(.socialUserRegistered) {
+    max-width: 550px;
+
+    .email-pass-method {
+      border-right: 1px solid #c1cad4;
+      padding-right: 1rem;
+
+      .loading-flasher {
+        &::after {
+          left: 9px;
+          top: -2px;
+        }
+      }
+    }
+
+    .account-provider-method {
+      padding-left: calc(1rem - 1px);
+    }
+  }
+
+  @media (max-width: 575px) {
+    .method-columns {
+      display: block;
+    }
+
+    &:not(.offeredToLogin):not(.accountCreated):not(.socialUserRegistered) {
+      max-width: 340px;
+
+      .email-pass-method {
+        border: {
+          right: none !important;
+        }
+        padding: {
+          right: calc(var(--bs-gutter-x) * 0.5);
+          bottom: 1rem;
+        }
+      }
+
+      .account-provider-method {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+
+        &:before {
+          content: '';
+          display: block;
+          position: relative;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid #c1cad4;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    padding: {
+      left: .5rem;
+      right: .5rem;
+    }
+  }
+
+  &.dark-theme:not(.offeredToLogin):not(.accountCreated):not(.socialUserRegistered) .email-pass-method {
+    border-right: 1px solid #3d4248;
+  }
+}
+
+.reg-form, .login-form, .reset-pass-form {
+  .loading-flasher {
+    &::after {
+      right: 2px;
+    }
+  }
+
+  &.loggingInAsync .loading-flasher::after,
+  .authProvider.btn.authenticating::after {
+    opacity: 1;
+    animation: {
+      name: flash;
+      duration: 1s;
+      iteration-count: infinite;
+    }
+  }
+}
